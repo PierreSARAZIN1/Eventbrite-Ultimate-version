@@ -1,0 +1,39 @@
+</br>
+</br>
+<h3> Renseigne ton event dans le formulaire ci-dessous 👇 </h3>
+</br>
+</br>
+
+<%= form_tag url_for(action: 'create'), method: "event" do %>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <%= label_tag 'Date de début' %>
+    <%= text_field_tag(:start_date) %>
+    <br /> <br />
+
+    <%= label_tag 'Durée' %>
+    <%= text_field_tag(:duration) %>
+    <br /> <br />
+
+    <%= label_tag 'Titre' %>
+    <%= text_field_tag(:title) %>
+    <br /> <br />
+    
+    <%= label_tag 'Description' %>
+    <%= text_field_tag(:description) %>
+    <br /> <br />
+
+    <%= label_tag 'Prix' %>
+    <%= text_field_tag(:price) %>
+    <br /> <br />
+
+    <%= label_tag 'Où ?' %>
+    <%= text_field_tag(:location) %>
+    <br /> <br />
+
+  <%= submit_tag "Create Event" %>
+
+
+
+  <% end %>
+
